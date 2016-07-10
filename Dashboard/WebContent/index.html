@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="dashboard">
 <head>
 <meta charset="ISO-8859-1">
 <title>Dashboard</title>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
 <script src="js/hello.js"></script>
 
 </head>
 <body>
-<div ng-controller="Hello">
-			<p>The x-axis is {{greeting.xaxis}}</p>
-			<p>The y-axis is {{greeting.yaxis}}</p>
-		</div>
+	<div ng-controller="graphOneController">
+		<p>The x-axis is {{graph.xaxis}}</p>
+		<p>The y-axis is {{graph.yaxis}}</p>
+	</div>
+	
+	<div ng-controller="graphTwoController">
+		<p>The x-axis is {{graph}}</p>
+	</div>
+
+	<div>
+ 	<p>Name: <input type="text" ng-model="name"></p>
+ 	<p ng-bind="name"></p>
+	</div>
 </body>
 </html>

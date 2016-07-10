@@ -29,6 +29,7 @@ public class DashboardHomeResource {
 
 	@GET
 	@Path("/testapi")
+	@Produces(MediaType.APPLICATION_JSON)
 	public String testapi() {
 		return "if you are seeing this message, then your api is working";
 	}
