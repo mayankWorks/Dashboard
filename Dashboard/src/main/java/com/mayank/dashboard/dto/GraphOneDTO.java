@@ -60,7 +60,6 @@ public class GraphOneDTO {
 	public String toString() {
 		return "GraphOneDTO [xaxis=" + xaxis + ", yaxis=" + yaxis + "]";
 	}
-
 	
 }
 
