@@ -3,8 +3,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Dashboard</title>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+<script	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
 <script src="js/hello.js"></script>
 
 </head>
@@ -13,14 +12,25 @@
 		<p>The x-axis is {{graph.xaxis}}</p>
 		<p>The y-axis is {{graph.yaxis}}</p>
 	</div>
-	
+
 	<div ng-controller="graphTwoController">
 		<p>The x-axis is {{graph}}</p>
 	</div>
 
+	<div  ng-controller="graphOneListController">
+		<table>
+		<tr ng-repeat = "ls in graphlist">
+		<td>{{ls.xaxis}}</td>
+		<td>{{ls.yaxis}}</td>
+		</tr>
+		</table>
+	</div>
+	
 	<div>
- 	<p>Name: <input type="text" ng-model="name"></p>
- 	<p ng-bind="name"></p>
+		<p>
+			Name: <input type="text" ng-model="name">
+		</p>
+		<p ng-bind="name"></p>
 	</div>
 </body>
 </html>

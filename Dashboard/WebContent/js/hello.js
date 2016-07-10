@@ -14,3 +14,10 @@ myapp.controller('graphTwoController',function Hello1($scope, $http) {
             $scope.graph = data;
         });
 })
+
+myapp.controller('graphOneListController',function Hello1($scope, $http) {
+    $http.get('http://localhost:8080/Dashboard/rest/resources/graphonelist').
+        success(function(data) {
+            $scope.graphlist = data;
+        });
+})
