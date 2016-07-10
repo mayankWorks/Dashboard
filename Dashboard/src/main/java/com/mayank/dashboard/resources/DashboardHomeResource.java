@@ -3,17 +3,20 @@
  */
 package com.mayank.dashboard.resources;
 
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+
 /**
  * @author Maverick
  *
  */
+@Path("/resources")
 public class DashboardHomeResource {
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		System.out.println("Your main method is running");
+	@GET
+	@Path("/testapi")
+	public String testapi(){
+	return "if you are seeing this message, then your api is working";	
 	}
 
 }
